@@ -19,13 +19,12 @@ createGridButton.onclick = function() {
     inputText.value = null;
   }
   else{//otherwise, creates a new div box with the given id, then adds it to the grid container
+    for(x = 0; x < dimensions; x++){//for each row of the grid
 
-    for(x = 0; x < dimensions; x++){
-      gridContainer.innerHTML += "<br>";
-      for(y = 0; y < dimensions; y++){
+      for(y = 0; y < dimensions; y++){//creates how ever many boxes the dimensions variable is set to
         createBox();
       }
-    } 
+    }
   }
 }
 
@@ -34,13 +33,13 @@ clearButton.onclick = function() { //this clear button clears the sketch grid
 }
 
 function clearGrid() {
-  while (gridContainer.firstChild){
+  while (gridContainer.firstChild){//while there is still a first child, remove it from the grid untill there are no more children
     gridContainer.removeChild(gridContainer.firstChild);
   }
 }
 
-function createBox(){
-  const gridElement = document.createElement("div"); 
+function createBox(){ //creates one box element for the grid
+  const gridElement = document.createElement("div");
   gridElement.id = "gridElement";
   //gridElement.classList.add("mainGrid");
   gridContainer.appendChild(gridElement);
