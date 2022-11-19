@@ -28,12 +28,6 @@ createGridButton.onclick = function() {
       }
     }
   }
-
-  const gridElement = document.getElementById("gridElement");
-  gridElement.addEventListener("mouse-down", () => {
-    clearGrid();
-  });
-
 }
 
 clearButton.onclick = function() { //this clear button clears the sketch grid
@@ -52,5 +46,8 @@ function createBox(container){ //creates one box element for the grid
   const gridElement = document.createElement("div");
   gridElement.id = "gridElement";
   //gridElement.classList.add("mainGrid");
+  gridElement.addEventListener("mousedown", function(){
+    gridElement.style.backgroundColor = "black";
+  });
   container.appendChild(gridElement);
 }
