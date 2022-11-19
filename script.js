@@ -28,11 +28,19 @@ createGridButton.onclick = function() {
       }
     }
   }
+
+  const gridElement = document.getElementById("gridElement");
+  gridElement.addEventListener("mouse-down", () => {
+    clearGrid();
+  });
+
 }
 
 clearButton.onclick = function() { //this clear button clears the sketch grid
   clearGrid();
 }
+
+
 
 function clearGrid() {
   while (gridContainer.firstChild){//while there is still a first child, remove it from the grid untill there are no more children
