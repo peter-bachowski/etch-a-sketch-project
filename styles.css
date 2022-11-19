@@ -5,5 +5,11 @@
 }
 
 #gridContainer{
- display: inline;
+ display: flex;
+ flex-direction: column;
+}
+
+#rowContainer {
+  display: flex;
+  flex-direction: row;
 }

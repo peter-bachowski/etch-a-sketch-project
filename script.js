@@ -20,9 +20,11 @@ createGridButton.onclick = function() {
   }
   else{//otherwise, creates a new div box with the given id, then adds it to the grid container
     for(x = 0; x < dimensions; x++){//for each row of the grid
-
+      const rowContainer = document.createElement("div");
+      rowContainer.id = "rowContainer";
+      gridContainer.appendChild(rowContainer);
       for(y = 0; y < dimensions; y++){//creates how ever many boxes the dimensions variable is set to
-        createBox();
+        createBox(rowContainer);
       }
     }
   }
@@ -38,9 +40,9 @@ function clearGrid() {
   }
 }
 
-function createBox(){ //creates one box element for the grid
+function createBox(container){ //creates one box element for the grid
   const gridElement = document.createElement("div");
   gridElement.id = "gridElement";
   //gridElement.classList.add("mainGrid");
-  gridContainer.appendChild(gridElement);
+  container.appendChild(gridElement);
 }
