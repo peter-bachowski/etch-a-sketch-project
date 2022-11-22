@@ -8,15 +8,19 @@
   <title>Etch-a-Sketch</title>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
-  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
 
 <body>
-  <div id="header">Etch-a-Sketch!</div>
-  <div id="enterSize">Please enter the size of your grid (dimensions): <br>
-    <button id="makeGrid">Create your grid</button>
-    <button id="clearButton">Clear</button>
+
+  <div class="header">Etch-a-Sketch!</div>
+  <div class="centerContent">
+    <div id="sideBar">
+      <button id="makeGrid">Create your grid</button>
+      <button id="clearButton">Clear</button>
+    </div>
+    <div id="gridContainer"></div>
   </div>
+  <div class="footer">Copyright © Peter Bachowski 2022</div>
 
 </body>
 
